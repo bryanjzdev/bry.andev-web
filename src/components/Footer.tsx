@@ -1,4 +1,4 @@
-import { Linkedin, Instagram, Github, Code, Heart, AtSign, Mail, Phone, MapPin, Rocket } from 'lucide-react'; 
+import { Linkedin, Instagram, Github, Code, Heart, Mail, MapPin } from 'lucide-react'; 
 import Link from 'next/link';
 
 // Custom TikTok Icon
@@ -30,8 +30,6 @@ export const Footer = () => {
       </div>
       
       <div className="relative container mx-auto px-6 py-16">
-        {/* Call to Action Section */}
-        
         
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
@@ -127,7 +125,7 @@ export const Footer = () => {
         {/* Signature */}
         <div className="text-center mt-8 pt-6 border-t border-gray-900">
           <p className="text-gray-700 text-xs italic">
-            "Cada línea de código es una oportunidad para crear algo extraordinario"
+            &quot;Cada línea de código es una oportunidad para crear algo extraordinario&quot;
           </p>
         </div>
       </div>

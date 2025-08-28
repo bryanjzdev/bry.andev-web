@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { ArrowDown, Code, Database, Server, Cloud, BrainCircuit, ShoppingCart, Smartphone, LineChart, Bot, Mail, Linkedin, Rocket } from 'lucide-react';
+import Image from 'next/image'; // Importar el componente Image
 
 // Componente para el botón de scroll suave
 const ScrollTo = ({ to, children }: { to: string; children: React.ReactNode }) => {
@@ -126,9 +127,11 @@ export default function HomePage() {
                   <div className="relative group">
                     <div className="absolute inset-0 bg-gradient-to-r from-white/20 to-gray-300/20 blur-xl rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     <div className="relative w-80 h-80 md:w-96 md:h-96 bg-gray-800/50 backdrop-blur-sm border border-gray-600 rounded-2xl flex items-center justify-center overflow-hidden transition-all duration-500 group-hover:border-gray-500">
-                      <img 
+                      <Image 
                         src="/bryan01.png" 
                         alt="Bryan Juarez Martinez - Desarrollador Full Stack" 
+                        width={400}
+                        height={400}
                         className="w-full h-full object-cover rounded-2xl transition-transform duration-500 group-hover:scale-105" 
                       />
                     </div>
@@ -286,7 +289,7 @@ export default function HomePage() {
           </motion.div>
           
           <motion.div variants={fadeIn} className="flex flex-wrap justify-center items-center gap-4 max-w-5xl mx-auto">
-            {['Python', 'JavaScript', 'Vue', 'React', 'Next.js', 'Node.js', 'Express', 'Laravel', 'Django', 'Flask', 'PeopleSoft', 'PostgreSQL', 'MySQL', 'MongoDB', 'AWS', 'Git', 'Docker'].map((tech, i) => (
+            {['Python', 'JavaScript', 'Vue', 'React', 'Next.js', 'Node.js', 'Express', 'Laravel', 'Django', 'Flask', 'PeopleSoft', 'PostgreSQL', 'MySQL', 'MongoDB', 'AWS', 'Git', 'Docker'].map((tech) => (
               <div 
                 key={tech} 
                 className="group bg-gray-900/50 backdrop-blur-sm border border-gray-700 text-gray-300 px-6 py-3 rounded-xl font-medium transition-all duration-300 hover:bg-gray-900/70 hover:border-gray-600 hover:text-white hover:scale-105 shadow-lg"
