@@ -1,7 +1,7 @@
 'use client'; // Necesario para que las animaciones y eventos funcionen
 
 import { motion } from 'framer-motion';
-import { ArrowDown, Code, Database, Server, Cloud, BrainCircuit, ShoppingCart, Smartphone, LineChart, Bot, Mail, Linkedin, Phone, Wrench, Rocket, User } from 'lucide-react';
+import { ArrowDown, Code, Database, Server, Cloud, BrainCircuit, ShoppingCart, Smartphone, LineChart, Bot, Mail, Linkedin, Rocket } from 'lucide-react';
 
 // Componente para el botón de scroll suave
 const ScrollTo = ({ to, children }: { to: string; children: React.ReactNode }) => {
@@ -98,7 +98,7 @@ export default function HomePage() {
           </motion.div>
         </motion.section>
 
-        {/* --- SECCIÓN ACERCA DE MÍ (REESTRUCTURADA) --- */}
+        {/* --- SECCIÓN ACERCA DE MÍ --- */}
         <motion.section 
           id="acerca" 
           className="py-32 relative z-10"
@@ -147,7 +147,6 @@ export default function HomePage() {
                     </p>
                   </div>
                   
-                  {/* Estadísticas o highlights */}
                   <div className="grid grid-cols-2 gap-6 pt-6 border-t border-gray-700">
                     <div className="text-center">
                       <div className="text-3xl font-bold text-white mb-2">2+</div>
@@ -167,7 +166,6 @@ export default function HomePage() {
                     </div>
                   </div>
                 </motion.div>
-                
               </div>
             </div>
           </motion.div>
@@ -191,30 +189,12 @@ export default function HomePage() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {[
-              {
-                title: "Software a la Medida",
-                description: "Creo herramientas digitales precisas para tus necesidades: desde sistemas internos (CRM, ERP) hasta plataformas complejas que resuelven problemas específicos de tu operación y te dan una ventaja competitiva."
-              },
-              {
-                title: "Automatización e IA",
-                description: "Implemento automatizaciones y agentes de IA para optimizar tus operaciones, reducir costos y liberar a tu equipo para que se enfoque en tareas de alto valor. Aumenta la eficiencia y escala tu negocio."
-              },
-              {
-                title: "Aplicaciones Móviles",
-                description: "Diseño experiencias móviles nativas y multiplataforma que cautivan a tus usuarios. Creo aplicaciones intuitivas, rápidas y funcionales que fortalecen tu marca y abren nuevos canales de interacción."
-              },
-              {
-                title: "Mantenimiento y Soporte Web",
-                description: "Aseguro que tu sitio web o aplicación funcione sin interrupciones. Ofrezco planes de mantenimiento que incluyen actualizaciones de seguridad, optimización de velocidad y soporte técnico continuo."
-              },
-              {
-                title: "Optimización de Rendimiento",
-                description: "Analizo y mejoro la velocidad y eficiencia de tus aplicaciones existentes. Un sistema más rápido se traduce en una mejor experiencia de usuario, mayor retención y mejores resultados de negocio."
-              },
-              {
-                title: "Consultoría Tecnológica",
-                description: "Te guío en la elección de la arquitectura y herramientas adecuadas para tu proyecto. Tomar las decisiones correctas desde el inicio garantiza un producto escalable, seguro y a prueba de futuro."
-              }
+              { title: "Software a la Medida", description: "Creo herramientas digitales precisas para tus necesidades: desde sistemas internos (CRM, ERP) hasta plataformas complejas que resuelven problemas específicos de tu operación y te dan una ventaja competitiva." },
+              { title: "Automatización e IA", description: "Implemento automatizaciones y agentes de IA para optimizar tus operaciones, reducir costos y liberar a tu equipo para que se enfoque en tareas de alto valor. Aumenta la eficiencia y escala tu negocio." },
+              { title: "Aplicaciones Móviles", description: "Diseño experiencias móviles nativas y multiplataforma que cautivan a tus usuarios. Creo aplicaciones intuitivas, rápidas y funcionales que fortalecen tu marca y abren nuevos canales de interacción." },
+              { title: "Mantenimiento y Soporte Web", description: "Aseguro que tu sitio web o aplicación funcione sin interrupciones. Ofrezco planes de mantenimiento que incluyen actualizaciones de seguridad, optimización de velocidad y soporte técnico continuo." },
+              { title: "Optimización de Rendimiento", description: "Analizo y mejoro la velocidad y eficiencia de tus aplicaciones existentes. Un sistema más rápido se traduce en una mejor experiencia de usuario, mayor retención y mejores resultados de negocio." },
+              { title: "Consultoría Tecnológica", description: "Te guío en la elección de la arquitectura y herramientas adecuadas para tu proyecto. Tomar las decisiones correctas desde el inicio garantiza un producto escalable, seguro y a prueba de futuro." }
             ].map((service, i) => (
               <motion.div 
                 key={i}
@@ -250,45 +230,14 @@ export default function HomePage() {
             <div className="w-24 h-1 bg-white mx-auto rounded-full"></div>
           </motion.div>
 
-          {/* Proyectos Principales */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto mb-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {[
-              {
-                title: "Sistema POS Restaurante",
-                description: "Plataforma completa para gestión de ventas, inventario y reportes",
-                tech: "Laravel • MySQL • Vue.js",
-                category: "Web App"
-              },
-              {
-                title: "App Financiera Móvil",
-                description: "Aplicación para control de gastos personales con IA predictiva",
-                tech: "React Native • Node.js • MongoDB",
-                category: "Mobile App"
-              },
-              {
-                title: "E-commerce Marketplace",
-                description: "Plataforma multi-vendor con sistema de pagos integrado",
-                tech: "Next.js • Stripe • PostgreSQL",
-                category: "E-commerce"
-              },
-              {
-                title: "Bot de Automatización",
-                description: "Agente inteligente para atención al cliente 24/7",
-                tech: "Python • OpenAI • FastAPI",
-                category: "AI/Automation"
-              },
-              {
-                title: "Dashboard Ejecutivo",
-                description: "Panel de control con métricas en tiempo real para CEO",
-                tech: "React • D3.js • Express",
-                category: "Analytics"
-              },
-              {
-                title: "Sistema ERP Pequeña Empresa",
-                description: "Gestión integral de recursos y procesos empresariales",
-                tech: "Django • PostgreSQL • Redis",
-                category: "Enterprise"
-              }
+              { title: "Sistema POS Restaurante", description: "Plataforma completa para gestión de ventas, inventario y reportes", tech: "Laravel • MySQL • Vue.js", category: "Web App" },
+              { title: "App Financiera Móvil", description: "Aplicación para control de gastos personales con IA predictiva", tech: "React Native • Node.js • MongoDB", category: "Mobile App" },
+              { title: "E-commerce Marketplace", description: "Plataforma multi-vendor con sistema de pagos integrado", tech: "Next.js • Stripe • PostgreSQL", category: "E-commerce" },
+              { title: "Bot de Automatización", description: "Agente inteligente para atención al cliente 24/7", tech: "Python • OpenAI • FastAPI", category: "AI/Automation" },
+              { title: "Dashboard Ejecutivo", description: "Panel de control con métricas en tiempo real para CEO", tech: "React • D3.js • Express", category: "Analytics" },
+              { title: "Sistema ERP Pequeña Empresa", description: "Gestión integral de recursos y procesos empresariales", tech: "Django • PostgreSQL • Redis", category: "Enterprise" }
             ].map((project, i) => (
               <motion.div 
                 key={i}
@@ -341,7 +290,6 @@ export default function HomePage() {
               <div 
                 key={tech} 
                 className="group bg-gray-900/50 backdrop-blur-sm border border-gray-700 text-gray-300 px-6 py-3 rounded-xl font-medium transition-all duration-300 hover:bg-gray-900/70 hover:border-gray-600 hover:text-white hover:scale-105 shadow-lg"
-                style={{ animationDelay: `${i * 0.1}s` }}
               >
                 <span className="relative z-10">{tech}</span>
               </div>
@@ -397,7 +345,6 @@ export default function HomePage() {
                 <Mail className="w-4 h-4" />
                 bjm.dev.soft@gmail.com
               </p>
-
             </div>
           </motion.div>
         </motion.section>
